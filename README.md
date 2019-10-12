@@ -1,5 +1,13 @@
 # Javascript-questions
 ```js
+var f = function g(){
+    return 23
+};
+console.log(typeof g());
+
+Output:
+ReferenceError: g is not defined
+
 Array.prototype.myMethod = function(){
     for(i=0; i< this.length;i++){
         this[i] = this[i].toUpperCase();
@@ -9,7 +17,8 @@ var my_arr = ["one","two","Three","Four"];
 my_arr.myMethod();
 console.log(my_arr);
 
-Output: ["ONE", "TWO", "THREE", "FOUR"]
+Output:
+["ONE", "TWO", "THREE", "FOUR"]
 ```
 
 ```js
