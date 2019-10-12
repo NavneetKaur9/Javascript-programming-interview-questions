@@ -1,5 +1,18 @@
 # Javascript-questions
 ```js
+Array.prototype.myMethod = function(){
+    for(i=0; i< this.length;i++){
+        this[i] = this[i].toUpperCase();
+    }
+}
+var my_arr = ["one","two","Three","Four"];
+my_arr.myMethod();
+console.log(my_arr);
+
+Output: ["ONE", "TWO", "THREE", "FOUR"]
+```
+
+```js
 (function() {
 	var arrayNumb = [ 2, 8, 15, 16, 23, 42];
 	arrayNumb.sort();
