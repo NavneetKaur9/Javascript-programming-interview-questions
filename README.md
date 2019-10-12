@@ -1,5 +1,54 @@
 # Javascript-questions
 ```js
+var A=12;
+function foo(a){
+    console.log(A);
+    var A=13;
+}
+foo(A);
+Output: undefined
+```
+```js
+function test1(){
+    var a =1;
+    alert(a);
+
+    if(true){
+        var a;
+        alert(a);
+        a=2;
+    }
+    alert(a);
+}
+test1();
+
+Output:
+1,1,2
+```
+```js
+var obj ={
+    firstName : "",
+    lastName : ""
+}
+function getFullName(firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    obj.firstName = firstName;
+    obj.lastName = lastName;
+    getResult();
+}
+function getResult(){
+    console.log(this.firstName + " " + this.lastName);
+    console.log(obj.firstName + " " + obj.lastName);
+}
+
+getFullName("Navneet", "Kaur");
+
+Output:
+Rajesh Singh
+Rajesh Singh
+```
+```js
 var f = function g(){
     return 23
 };
@@ -7,7 +56,8 @@ console.log(typeof g());
 
 Output:
 ReferenceError: g is not defined
-
+```
+```js
 Array.prototype.myMethod = function(){
     for(i=0; i< this.length;i++){
         this[i] = this[i].toUpperCase();
